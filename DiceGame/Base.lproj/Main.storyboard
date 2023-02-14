@@ -1,24 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DiceGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DICE GAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCC-Hq-G47">
+                                <rect key="frame" x="145" y="174" width="124.5" height="99"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="Jjx-8K-Vye">
+                                <rect key="frame" x="51" y="383" width="312" height="130.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black1" translatesAutoresizingMaskIntoConstraints="NO" id="vAC-bG-NZH">
+                                        <rect key="frame" x="0.0" y="0.0" width="130.5" height="130.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="vAC-bG-NZH" secondAttribute="height" multiplier="65:65" id="KY8-ej-FGd"/>
+                                            <constraint firstAttribute="width" secondItem="vAC-bG-NZH" secondAttribute="height" multiplier="65:65" id="OkG-sW-Xpm"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black1" translatesAutoresizingMaskIntoConstraints="NO" id="MU2-Qv-qL5">
+                                        <rect key="frame" x="181.5" y="0.0" width="130.5" height="130.5"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3e-Wk-JOD">
+                                <rect key="frame" x="183" y="688" width="48" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Roll"/>
+                                <connections>
+                                    <action selector="rollButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h3Q-cU-Jy0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jjx-8K-Vye" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="51" id="Dv7-8F-h7y"/>
+                            <constraint firstItem="Jjx-8K-Vye" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JmU-Iu-0Rb"/>
+                            <constraint firstItem="eCC-Hq-G47" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="LVb-ls-MtG"/>
+                            <constraint firstItem="C3e-Wk-JOD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T2L-0h-Rv9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C3e-Wk-JOD" secondAttribute="bottom" constant="143" id="mBJ-sO-s2f"/>
+                            <constraint firstItem="Jjx-8K-Vye" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mBN-SP-U8F"/>
+                            <constraint firstItem="eCC-Hq-G47" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nw7-fw-xKg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jjx-8K-Vye" secondAttribute="trailing" constant="51" id="uEZ-mm-0Ur"/>
+                            <constraint firstItem="Jjx-8K-Vye" firstAttribute="top" secondItem="eCC-Hq-G47" secondAttribute="bottom" constant="110" id="zcN-Ql-Pcg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstImageView" destination="vAC-bG-NZH" id="G7L-ei-11s"/>
+                        <outlet property="secondImageView" destination="MU2-Qv-qL5" id="tMi-dA-wPQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="81.696428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="black1" width="399" height="399"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
